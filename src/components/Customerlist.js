@@ -49,7 +49,7 @@ const Customerlist = () => {
             field: 'phone',
             sortable: true,
             filter: true,
-            width: 160,
+            width: 150,
         },
     ]);
 
@@ -71,7 +71,7 @@ const Customerlist = () => {
         <>
             <div
                 className="ag-theme-material"
-                style={{ height: 600, width: '%', margin: 'auto' }}
+                style={{ height: 600, width: '90%', margin: 'auto' }}
             >
                 <AgGridReact
                     rowData={customers}
@@ -79,6 +79,7 @@ const Customerlist = () => {
                     pagination={true}
                     suppressCellFocus={true}
                     paginationPageSize={10}
+                    animateRows={true}
                 />
             </div>
         </>
