@@ -60,11 +60,8 @@ const Customerlist = () => {
     const getCustomers = () => {
         fetch(CAPI_URL)
             .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    alert('Something went wrong');
-                }
+                if (response.ok) return response.json();
+                else alert('Something went wrong');
             })
             .then((data) => setCustomers(data.content))
             .catch((err) => console.error(err));

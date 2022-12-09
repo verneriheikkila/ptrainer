@@ -11,6 +11,7 @@ const Traininglist = () => {
         {
             field: 'date',
             sortable: true,
+            filter: true,
             valueFormatter: (params) =>
                 format(new Date(params.value), 'dd.MM.yyyy hh:mm'),
         },
@@ -44,11 +45,8 @@ const Traininglist = () => {
     const getTrainings = () => {
         fetch(GETTAPI_URL)
             .then((response) => {
-                if (response.ok) {
-                    return response.json();
-                } else {
-                    alert('Something went wrong');
-                }
+                if (response.ok) return response.json();
+                else alert('Something went wrong');
             })
             .then((data) => setTrainings(data))
             .catch((err) => console.error(err));
