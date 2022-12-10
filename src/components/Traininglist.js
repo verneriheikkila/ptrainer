@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
-import { GETTAPI_URL } from '../constants';
+import { GETTAPI_URL, TAPI_URL } from '../constants';
 import { format } from 'date-fns';
+import { Button } from '@mui/material';
 
 const Traininglist = () => {
     const [trainings, setTrainings] = useState([]);
@@ -36,6 +37,18 @@ const Traininglist = () => {
                 ' ' +
                 params.data.customer.lastname,
         },
+        {
+            width: 120,
+            cellRenderer: (params) => (
+                <Button
+                    color="error"
+                    size="small"
+                    onClick={() => deleteTraining(params.data)}
+                >
+                    Delete
+                </Button>
+            ),
+        },
     ]);
 
     useEffect(() => {
@@ -50,6 +63,17 @@ const Traininglist = () => {
             })
             .then((data) => setTrainings(data))
             .catch((err) => console.error(err));
+    };
+
+    const deleteTraining = (data) => {
+        if (window.confirm('Are you sure?')) {
+            fetch(TAPI_URL + '/' + data.id, { method: 'DELETE' })
+                .then((response) => {
+                    if (response.ok) getTrainings();
+                    else alert('Something went wrong');
+                })
+                .catch((err) => console.error(err));
+        }
     };
 
     return (
