@@ -1,6 +1,6 @@
 // @ts-nocheck
 import './App.css';
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import { Tab, Tabs } from '@mui/material';
 import React from 'react';
 import Customerlist from './components/Customerlist';
@@ -14,7 +14,7 @@ function App() {
     };
     return (
         <div className="App">
-            <BrowserRouter>
+            <HashRouter>
                 <Tabs
                     value={value}
                     onChange={handleChange}
@@ -29,7 +29,7 @@ function App() {
                     <Route exact path="/trainings" element={<Traininglist />} />
                     <Route exact path="/calendar" element={<CalendarPg />} />
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }
