@@ -38,7 +38,7 @@ export default function CalendarPg() {
                 startAccessor="start"
                 endAccessor="end"
                 style={{
-                    height: '50vh',
+                    height: 600,
                     width: '90%',
                     display: 'inline-block',
                     maxWidth: 1250,

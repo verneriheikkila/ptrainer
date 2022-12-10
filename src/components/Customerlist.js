@@ -13,31 +13,27 @@ export default function Customerlist() {
 
     const [columnDefs] = useState([
         {
-            headerName: 'First name',
-            field: 'firstname',
+            headerName: 'Name',
+            field: 'firstname&lastname',
             sortable: true,
             filter: true,
-            width: 130,
-        },
-        {
-            headerName: 'Last name',
-            field: 'lastname',
-            sortable: true,
-            filter: true,
-            width: 130,
+            width: 160,
+            valueGetter: (params) =>
+                params.data.firstname + ' ' + params.data.lastname,
         },
         {
             headerName: 'Street adress',
             field: 'streetaddress',
             sortable: true,
             filter: true,
+            width: 150,
         },
         {
             headerName: 'Postal code',
             field: 'postcode',
             sortable: true,
             filter: true,
-            width: 140,
+            width: 135,
         },
         {
             field: 'city',
@@ -58,13 +54,13 @@ export default function Customerlist() {
             width: 150,
         },
         {
-            width: 140,
+            width: 110,
             cellRenderer: (params) => (
                 <AddTraining data={params.data} addTraining={addTraining} />
             ),
         },
         {
-            width: 100,
+            width: 75,
             cellRenderer: (params) => (
                 <EditCustomer
                     data={params.data}
@@ -73,7 +69,7 @@ export default function Customerlist() {
             ),
         },
         {
-            width: 120,
+            width: 115,
             cellRenderer: (params) => (
                 <Button
                     color="error"
@@ -159,7 +155,7 @@ export default function Customerlist() {
             <div
                 className="ag-theme-material"
                 style={{
-                    height: '50vh',
+                    height: 600,
                     width: '90%',
                     display: 'inline-block',
                     maxWidth: 1250,

@@ -40,7 +40,7 @@ export default function Statistics() {
         <div
             style={{
                 width: '90%',
-                height: '50vh',
+                height: 600,
                 display: 'inline-block',
                 maxWidth: 1250,
             }}

@@ -36,7 +36,7 @@ export default function AddTraining(props) {
     return (
         <div>
             <Button onClick={handleClickOpen} size="small">
-                Add training
+                +Training
             </Button>
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>
