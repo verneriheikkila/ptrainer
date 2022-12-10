@@ -6,6 +6,7 @@ import React from 'react';
 import Customerlist from './components/Customerlist';
 import Traininglist from './components/Traininglist';
 import CalendarPg from './components/CalendarPg';
+import Statistics from './components/Statistics';
 
 function App() {
     const [value, setValue] = React.useState(0);
@@ -23,12 +24,14 @@ function App() {
                     <Tab component={Link} to="/customers" label="Customers" />
                     <Tab component={Link} to="/trainings" label="Trainings" />
                     <Tab component={Link} to="/Calendar" label="Calendar" />
+                    <Tab component={Link} to="/Statistics" label="Statistics" />
                 </Tabs>
                 <Routes>
                     <Route path="/" element={<Navigate to="/customers" />} />
                     <Route exact path="/customers" element={<Customerlist />} />
                     <Route exact path="/trainings" element={<Traininglist />} />
                     <Route exact path="/calendar" element={<CalendarPg />} />
+                    <Route exact path="/statistics" element={<Statistics />} />
                 </Routes>
             </HashRouter>
         </div>

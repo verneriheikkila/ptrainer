@@ -37,7 +37,13 @@ export default function CalendarPg() {
                 events={events}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: '50vh' }}
+                style={{
+                    height: '50vh',
+                    width: '100%',
+                    display: 'inline-block',
+                    maxWidth: '1250px',
+                    margin: 15,
+                }}
             />
         </div>
     );
