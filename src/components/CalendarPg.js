@@ -42,7 +42,7 @@ export default function CalendarPg() {
                     width: '90%',
                     display: 'inline-block',
                     maxWidth: 1250,
-                    margin: 'auto',
+                    margin: 15,
                 }}
             />
         </div>

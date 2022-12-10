@@ -42,7 +42,7 @@ export default function Statistics() {
                 width: '90%',
                 height: '50vh',
                 display: 'inline-block',
-                maxWidth: '1250px',
+                maxWidth: 1250,
             }}
         >
             <ResponsiveContainer>
