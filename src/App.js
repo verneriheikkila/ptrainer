@@ -25,7 +25,7 @@ function App() {
                     <Tab component={Link} to="/Calendar" label="Calendar" />
                 </Tabs>
                 <Routes>
-                    <Route path="" element={<Navigate to="/customers" />} />
+                    <Route path="/" element={<Navigate to="/customers" />} />
                     <Route exact path="/customers" element={<Customerlist />} />
                     <Route exact path="/trainings" element={<Traininglist />} />
                     <Route exact path="/calendar" element={<CalendarPg />} />
