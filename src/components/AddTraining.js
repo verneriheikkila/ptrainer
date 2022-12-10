@@ -13,7 +13,7 @@ export default function AddTraining(props) {
         date: new Date(),
         duration: 0,
         activity: '',
-        customer: props.customerId,
+        customer: '',
     });
 
     const handleClickOpen = () => {
