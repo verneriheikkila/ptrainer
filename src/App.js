@@ -1,6 +1,6 @@
 // @ts-nocheck
 import './App.css';
-import { HashRouter, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes, Navigate } from 'react-router-dom';
 import { Tab, Tabs } from '@mui/material';
 import React from 'react';
 import Customerlist from './components/Customerlist';
@@ -25,6 +25,7 @@ function App() {
                     <Tab component={Link} to="/Calendar" label="Calendar" />
                 </Tabs>
                 <Routes>
+                    <Route path="" element={<Navigate to="/customers" />} />
                     <Route exact path="/customers" element={<Customerlist />} />
                     <Route exact path="/trainings" element={<Traininglist />} />
                     <Route exact path="/calendar" element={<CalendarPg />} />
