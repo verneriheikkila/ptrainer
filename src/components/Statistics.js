@@ -39,7 +39,7 @@ export default function Statistics() {
     return (
         <div
             style={{
-                width: '100%',
+                width: '90%',
                 height: '50vh',
                 display: 'inline-block',
                 maxWidth: '1250px',
@@ -50,8 +50,8 @@ export default function Statistics() {
                     data={data}
                     margin={{
                         top: 15,
-                        right: 5,
-                        left: 5,
+                        right: 15,
+                        left: 15,
                         bottom: 15,
                     }}
                 >

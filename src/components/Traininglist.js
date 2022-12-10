@@ -80,7 +80,13 @@ export default function Traininglist() {
         <>
             <div
                 className="ag-theme-material"
-                style={{ height: 600, width: '90%', margin: 'auto' }}
+                style={{
+                    height: '50vh',
+                    width: '90%',
+                    display: 'inline-block',
+                    maxWidth: 1250,
+                    margin: 'auto',
+                }}
             >
                 <AgGridReact
                     rowData={trainings}

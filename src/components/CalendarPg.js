@@ -39,10 +39,10 @@ export default function CalendarPg() {
                 endAccessor="end"
                 style={{
                     height: '50vh',
-                    width: '100%',
+                    width: '90%',
                     display: 'inline-block',
-                    maxWidth: '1250px',
-                    margin: 15,
+                    maxWidth: 1250,
+                    margin: 'auto',
                 }}
             />
         </div>
