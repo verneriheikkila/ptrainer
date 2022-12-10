@@ -6,8 +6,9 @@ import { CAPI_URL, TAPI_URL } from '../constants';
 import AddCustomer from './AddCustomer';
 import AddTraining from './AddTraining';
 import EditCustomer from './EditCustomer';
+import ExportCSV from './ExportCSV';
 
-const Customerlist = () => {
+export default function Customerlist() {
     const [customers, setCustomers] = useState([]);
 
     const [columnDefs] = useState([
@@ -168,9 +169,8 @@ const Customerlist = () => {
                     paginationPageSize={10}
                     animateRows={true}
                 />
+                <ExportCSV />
             </div>
         </>
     );
-};
-
-export default Customerlist;
+}

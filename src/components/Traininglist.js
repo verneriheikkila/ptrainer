@@ -6,7 +6,7 @@ import { GETTAPI_URL, TAPI_URL } from '../constants';
 import { format } from 'date-fns';
 import { Button } from '@mui/material';
 
-const Traininglist = () => {
+export default function Traininglist() {
     const [trainings, setTrainings] = useState([]);
     const [columnDefs] = useState([
         {
@@ -93,6 +93,4 @@ const Traininglist = () => {
             </div>
         </>
     );
-};
-
-export default Traininglist;
+}
