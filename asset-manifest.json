@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ptrainer/static/css/main.d9d06e0a.css",
-    "main.js": "/ptrainer/static/js/main.25b23df5.js",
+    "main.js": "/ptrainer/static/js/main.8332469c.js",
     "static/js/787.334af7a8.chunk.js": "/ptrainer/static/js/787.334af7a8.chunk.js",
     "index.html": "/ptrainer/index.html",
     "main.d9d06e0a.css.map": "/ptrainer/static/css/main.d9d06e0a.css.map",
-    "main.25b23df5.js.map": "/ptrainer/static/js/main.25b23df5.js.map",
+    "main.8332469c.js.map": "/ptrainer/static/js/main.8332469c.js.map",
     "787.334af7a8.chunk.js.map": "/ptrainer/static/js/787.334af7a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9d06e0a.css",
-    "static/js/main.25b23df5.js"
+    "static/js/main.8332469c.js"
   ]
 }
