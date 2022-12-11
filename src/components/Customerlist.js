@@ -151,28 +151,35 @@ export default function Customerlist() {
     };
 
     return (
-        <>
+        <div
+            className="ag-theme-material"
+            style={{
+                height: 600,
+                width: '90%',
+                display: 'inline-block',
+                maxWidth: 1250,
+                margin: 15,
+            }}
+        >
+            <AgGridReact
+                rowData={customers}
+                columnDefs={columnDefs}
+                pagination={true}
+                suppressCellFocus={true}
+                paginationPageSize={10}
+                animateRows={true}
+            />
             <div
-                className="ag-theme-material"
                 style={{
-                    height: 600,
-                    width: '90%',
-                    display: 'inline-block',
-                    maxWidth: 1250,
-                    margin: 'auto',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    gap: 15,
                 }}
             >
                 <AddCustomer addCustomer={addCustomer} />
-                <AgGridReact
-                    rowData={customers}
-                    columnDefs={columnDefs}
-                    pagination={true}
-                    suppressCellFocus={true}
-                    paginationPageSize={10}
-                    animateRows={true}
-                />
                 <ExportCSV />
             </div>
-        </>
+        </div>
     );
 }

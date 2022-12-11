@@ -77,26 +77,24 @@ export default function Traininglist() {
     };
 
     return (
-        <>
-            <div
-                className="ag-theme-material"
-                style={{
-                    height: 600,
-                    width: '90%',
-                    display: 'inline-block',
-                    maxWidth: 1250,
-                    margin: 'auto',
-                }}
-            >
-                <AgGridReact
-                    rowData={trainings}
-                    columnDefs={columnDefs}
-                    pagination={true}
-                    suppressCellFocus={true}
-                    paginationPageSize={10}
-                    animateRows={true}
-                />
-            </div>
-        </>
+        <div
+            className="ag-theme-material"
+            style={{
+                height: 600,
+                width: '90%',
+                display: 'inline-block',
+                maxWidth: 1250,
+                margin: 15,
+            }}
+        >
+            <AgGridReact
+                rowData={trainings}
+                columnDefs={columnDefs}
+                pagination={true}
+                suppressCellFocus={true}
+                paginationPageSize={10}
+                animateRows={true}
+            />
+        </div>
     );
 }
